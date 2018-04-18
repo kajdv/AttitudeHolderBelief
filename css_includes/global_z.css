@@ -1,0 +1,29 @@
+#VeryUnlikely:before {
+  content: "didn't";
+  padding-right: 1em;
+}
+
+#VeryLikely:after {
+  content: "definitely did";
+  padding-left: 1em;
+}
+
+p {
+  max-width: 50em;
+  margin: auto;
+}
+
+q {
+  margin-bottom: 1em;
+}
+
+.Form-Form {
+  width: 40em;
+  }
+
+
+#midScale {
+  position: absolute;
+  margin-top: 1.2em;
+  margin-left: -3.26em;
+}
