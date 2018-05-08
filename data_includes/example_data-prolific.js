@@ -144,9 +144,9 @@ var items = GetItemsFrom(data, null, {
     ["practice", "Separator", {transfer: "keypress", normalMessage: "Thanks. Please click here, or press any key to proceed to the experiment." } ],
     ["post-exp", "Form", { html: {include: "IbexFeedbackPreConfirmationProlific.html"} } ],
     ["post-exp", "__SendResults__", {} ],                       
-    ["post-exp", "Form", { html: {include: "IbexConfirmationProlific.html"} } ],
+    ["post-exp", "Form", { html: {include: "IbexConfirmationProlific.html"} } ]
     //["post-exp", "Form", {html: {include: "IbexDebriefing.html"} } ],
-    ["post-exp", "Message", {html: '<html><div align="center"><p><b>The results were successfully sent to the server. Thanks!</b></p></div></html>'}]
+    //["post-exp", "Message", {html: '<html><div align="center"><p><b>The results were successfully sent to the server. Thanks!</b></p></div></html>'}]
   ]
       
     
