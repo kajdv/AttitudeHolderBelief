@@ -3,7 +3,8 @@ var Parameters = {},
 
 for (parameter in URLParameters) Parameters[URLParameters[parameter].split("=")[0]] = URLParameters[parameter].split("=")[1];
 
-assert(Parameters.hasOwnProperty("id") == true, "Oops! It looks like you tried to access the experiment from outside of SONA. Please return to SONA and try again!");
+assert(Parameters.hasOwnProperty("id") == true, "Oops! It looks like something's gone wrong with your URL. Please return to Prolific and try the link again!");
+
 var id = Parameters.id;
 
 
@@ -140,11 +141,11 @@ var items = GetItemsFrom(data, null, {
     ["setcounter", "__SetCounter__", { } ],    
     ["consent", "Form", { html: {include: "IbexConsentProlific.html"} } ],       
     ["instructions", "Form", { html: {include: "IbexInstructions.html"} } ],    
-    ["cont", "Message", {html: '<html><div align="center"><p>The actual experiment is about to begin.</p><p> Please turn off any possible distractions and complete the experiment in one sitting.</p></div></html>'}],    
-    ["practice", "Separator", {transfer: "keypress", normalMessage: "Thanks. Please click here, or press any key to proceed to the experiment." } ],
+    ["cont", "Message", { html: '<html><div align="center"><p>The actual experiment is about to begin.</p><p> Please turn off any possible distractions and complete the experiment in one sitting.</p></div></html>'}],    
+    ["practice", "Separator", { transfer: "keypress", normalMessage: "Thanks. Please click here, or press any key to proceed to the experiment." } ],
     ["post-exp", "Form", { html: {include: "IbexFeedbackPreConfirmationProlific.html"} } ],
     ["post-exp", "__SendResults__", {} ],                       
-    ["post-exp", "Form", { html: {include: "IbexConfirmationProlific.html"} } ]
+    ["post-exp", "Message", { transfer:null, html: {include: "IbexConfirmationProlific.html"} } ]  
     //["post-exp", "Form", {html: {include: "IbexDebriefing.html"} } ],
     //["post-exp", "Message", {html: '<html><div align="center"><p><b>The results were successfully sent to the server. Thanks!</b></p></div></html>'}]
   ]
